@@ -1,6 +1,11 @@
 {# templates/default/new.html.twig #}
-{{ form(form, {'attr': {'novalidate': 'novalidate'}}) }}
-{{ form_start(form) }}
-{{ form_widget(form) }}
-{{ form_end(form) }}
+{% extends './base.html.twig' %}
+{% block title %}Form{% endblock %}
+{% block body %}
+        <h1>Formulario</h1>
+    {{ form(form, {'attr': {'novalidate': 'novalidate'}}) }}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+{% endblock %}
 
