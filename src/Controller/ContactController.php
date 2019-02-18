@@ -68,7 +68,6 @@ class ContactController extends AbstractController
 public function nuevo(Request $request)
 
 {
-
     $contacto = new Contacto();
 
     $formulario = $this->createFormBuilder($contacto)

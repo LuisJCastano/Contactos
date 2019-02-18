@@ -19,24 +19,12 @@ class LoginController extends AbstractController
             'lastUsername' => $lastUsername
         ));
     }
-/**
-
-* @Route("/admin", name="admin")
-
-*/
-
-public function admin() {
-
-    $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
-
-    $usuario = $this->getUser();
-
-    return new Response("Bienvenido a /admin, " . $usuario->getUserName());
-
-}
-
-public function otroControlador() {
-    $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
-    // Resto del código del controlador
-}
+    /**
+    * @Route("/admin", name="admin")
+    */
+        public function admin() {
+            $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+            $usuario = $this->getUser();
+            return new Response("Bienvenido a /admin, " . $usuario->getUserName());
+        }
 }
